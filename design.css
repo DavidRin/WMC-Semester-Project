@@ -1,0 +1,172 @@
+/* GRUNDLAYOUT */
+body {
+  background-color: rgb(35, 134, 5);/* Grüner Hintergrund */
+  font-style: italic;/* Text kursiv */
+  font-family: 'Brush Script MT', sans-serif;/* Schrift */
+}
+/* Trennlinie */
+hr {
+  height: 6px;/* Dicke der Linie */
+  background-color: rgb(116, 9, 9);
+  border-color: rgb(116, 9, 9);
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/*  TEXT */
+h1, h2, h3, p {
+  text-align: center;/* Alle Texte zentrieren */
+}
+
+ul, li {
+  text-align: center;/* Listen zentrieren */
+  list-style-type: circle;/*  Aufzählung Formatiren */
+  list-style-position: inside;
+}
+
+/* LINKS */
+a:link {
+  color: rgb(17, 17, 137);
+}
+
+a:visited {
+  color: rgb(116, 9, 9);
+}
+
+a:hover {
+  color: rgb(74, 3, 74);  
+}
+
+/* BILDER = */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SEITENSTRUKTUR*/
+.kopf {
+  text-decoration: underline overline;
+  text-decoration-color: rgb(116, 9, 9);
+  text-decoration-thickness: 2px;
+  font-size: x-large;
+}
+
+.koerper {
+  font-size: large;
+}
+
+.fuss {
+  font-size: medium;
+  color: rgb(3, 3, 40);
+}
+
+.fuss h2 {
+  text-decoration: underline;
+  text-decoration-color: rgb(116, 9, 9);
+  text-decoration-thickness: 5px;
+}
+
+.fuss h3 {
+  text-decoration: underline;
+  text-decoration-color: rgb(116, 9, 9);
+  text-decoration-thickness: 2px;
+}
+
+/* Container pro Bild */
+.galerie .bild-container {
+  position: relative;/* Wichtig für absolute Position der Sprechblase */
+  margin-bottom: 40px;
+  width: 500px;                
+  margin-left: auto;           
+  margin-right: auto;          
+}
+
+/* Galerie-Bilder */
+.galerie img {
+  width: 500px;
+  height: 800px;
+  object-fit: cover;
+  cursor: pointer;/* Mauszeiger wird zur Hand */
+  display: block;             
+}
+
+/*SPRECHBLASE*/
+.galerie .sprechblase {
+  display: none;/* Anfangs unsichtbar */
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 100%;   /* Links neben dem Bild */              
+  margin-right: 20px;          
+
+  background-color: rgb(255, 245, 220);
+  color: black;
+  padding: 12px;
+  width: 260px;
+  border-radius: 12px;
+  border: 2px solid rgb(116, 9, 9);
+  text-align: center;
+  font-size: medium;
+  z-index: 10;
+}
+
+/* Pfeil der Sprechblase – zeigt nach RECHTS zum Bild */
+.galerie .sprechblase::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20px;                
+  margin-top: -10px;
+
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgb(255, 245, 220);
+}
+
+/* QUIZ */
+
+/* Punktestand rechts neben dem Bild */
+#scoreAnzeige {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-left: 20px;
+  transform: translateY(-50%);
+  font-size: 48px;
+  font-weight: bold;
+  color: rgb(116, 9, 9);
+  display: none;
+}
+
+/* (Game Over) */
+.sprechblase.rechts {
+  left: 100%;
+  right: auto;
+  margin-left: 20px;
+}
+
+.sprechblase.rechts::after {
+  left: -20px;
+  right: auto;
+  border-color: transparent rgb(255, 245, 220) transparent transparent;
+}
+
+/* Antwortbuttons */
+.antwort {
+  width: 90%;
+  padding: 8px;
+  cursor: pointer;
+  font-family: inherit;
+}
+nav {
+  position: fixed;      /* Bleibt immer sichtbar */
+  top: 0;               /* Oben am Bildschirm */
+  right: 0;
+  width:9%;          /* Nimmt die ganze Breite ein */
+
+
+  padding: 10px 0;      /* Etwas Abstand innen */
+
+}

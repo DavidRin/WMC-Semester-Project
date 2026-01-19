@@ -1,0 +1,110 @@
+<!DOCTYPE html><!--KOmmentare-->
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Webvistenkarte</title>
+    <link href="design.css" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <script src="navigation.js" defer></script>
+     <script src="quiz.js" defer></script>
+    <script src="hintergrund.js" defer></script>
+  </head>
+  <body>
+<nav>
+  <select onchange="navAuswahl(this.value)">
+    <option value="">-- Navigation --</option>
+    <option value="Index.html">Startseite</option>
+    <option value="galerie.html">Galerie</option>
+    <option value="seite2.html">IP-Rechner</option>
+    <option value="bg">Hintergrund ändern</option>
+    <option value="fontStandard">Standardschrift</option>
+    <option value="fontHellblau">Schrift hellblau</option>
+    <option value="fontNormalFarbe">Schriftfarbe normal</option>
+  </select>
+  <hr>
+</nav>
+
+
+      <main>
+        <div class="kopf">
+            <h1>David Rinner</h1>
+            <hr>
+
+  <div class="galerie">
+  <div class="bild-container">
+
+    <!-- QUIZ-SPRECHBLASE LINKS -->
+    <div class="sprechblase" id="quizBox">
+      <p id="frageText"></p>
+      <button class="antwort" data-index="0"></button><br><br>
+      <button class="antwort" data-index="1"></button><br><br>
+      <button class="antwort" data-index="2"></button>
+    </div>
+
+    <!-- ZITAT-SPRECHBLASE RECHTS (bei Game Over) -->
+    <div class="sprechblase rechts" id="gameOverBox">
+      Gib einem Mann Feuer, und er hat es einen Tag lang warm.
+      Steck ihn in Brand und er hat es warm für den Rest seines Lebens.
+    </div>
+
+    <!-- PUNKTANZEIGE -->
+    <div id="scoreAnzeige">0</div>
+
+    <!-- BILD -->
+    <img id="quizBild"
+      src="https://www.paulkidby.com/wp-content/uploads/2016/01/Death-with-Kitten-II-439x627_c.jpg"
+      alt="Terry Pratchett Quiz">
+
+  </div>
+</div>
+            <!--<img src="https://www.paulkidby.com/wp-content/uploads/2016/01/Death-with-Kitten-II-439x627_c.jpg" alt="Ein Bild von mir">-->
+            </div> 
+            <hr>
+            <div class="koerper">
+            <h3> INFOS:</h3>
+            <p>Falsche Adresse in 8020 Graz</p>
+            <p>
+             Bitte unter <b>>keinen Umständen</b> mich unter:
+                <a href="mailto:david.rinner@bulme.at">david.rinner@bulme.at</a>
+                kontaktiern. Vielen Dank!
+             </p>
+             
+              <hr>
+              
+            <p>Ich lese gerne die Werke von :
+                <ul>
+                    <li><a href="https://www.terrypratchettbooks.com/" target="_blank">Terry Pratchett</a></li>
+                    <li><a href="https://www.neilgaiman.com/" target="_blank" >Neil Gaiman</a></li>
+                </ul>
+                  
+            </p>     
+
+            <p>
+                Lorem ipsum dolor sit <a href= "https://www.derstandard.at/" target="_blank">amet</a>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            </div>
+            <hr>
+            <div class="fuss">
+            <p>
+              <h2>Irgendeine Überschrift</h2>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            <P>
+              <h3>Noch eine Überschrift</h3>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </P>
+            <p>
+              <h3>Und schon wieder eine Überschrift</h3>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            
+            <p>
+              <h3>Eine letzte Überschrift</h3>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+                </main>
+                
+      </body>
+
+</html>

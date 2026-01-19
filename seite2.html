@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>IP-Adressen Rechner</title>
+  <link href="design.css" rel="stylesheet">
+  <script src="iprechner.js" defer></script>
+  <script src="navigation.js" defer></script>
+  <script src="hintergrund.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<nav>
+  <select onchange="navAuswahl(this.value)">
+    <option value="">-- Navigation --</option>
+    <option value="index.html">Startseite</option>
+    <option value="galerie.html">Galerie</option>
+    <option value="seite2.html">IP-Rechner</option>
+    <option value="bg">Hintergrund ändern</option>
+    <option value="fontStandard">Standardschrift</option>
+    <option value="fontHellblau">Schrift hellblau</option>
+    <option value="fontNormalFarbe">Schriftfarbe normal</option>
+  </select>
+  <hr>
+</nav>
+
+
+
+<main>
+
+  <div class="kopf">
+    <h1>IP-Adressen Rechner </h1>
+    <hr>
+  </div>
+
+  <hr>
+
+  <div class="koerper">
+    <form>
+    <p>
+      <label>IP-Adresse:</label><br>
+      <input type="text" id="ip" placeholder="z. B. 192.168.1.10">
+    </p>
+
+    <p>
+      <label>Suffix:</label><br>
+      <input type="number" id="suffix" placeholder="z. B. 24">
+    </p>
+    
+    <p>
+      <button type ="button" onclick="berechneIP()">Berechnen</button>
+    </p>
+    </form>
+    <hr>
+
+    <p><strong>Subnetzmaske:</strong> <span id="maske">—</span></p>
+    <p><strong>Netzwerkadresse:</strong> <span id="netz">—</span></p>
+    <p><strong>Broadcast-Adresse:</strong> <span id="broadcast">—</span></p>
+    <p><strong>Nutzbare Hosts:</strong> <span id="hosts">—</span></p>
+
+  </div>
+
+</main>
+
+</body>
+</html>
